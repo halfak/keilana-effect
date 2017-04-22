@@ -1,0 +1,30 @@
+\begin{table*}
+\centering
+\caption{ORES wp10 fitness statistics. The fitness statistics of ORES ``wp10'' model based on 10-fold cross-validation are shown in table format.  Note that ``within-1'' accuracy represents the per-class accuracy measure where being off by one is considered a successful prediction.  The overall accuracy is 62.9\% and the within-1 accuracy is 90.7\%.  These figures compare favorably to \protect\cite{wang15success} of 58.2\% and 89.5\% respectively.  I've included the ROC-AUC metric to demonstrate that the probability estimates made by the model are generally useful.  As in \protect\cite{wang15success}, I also find that B- and C-class show lower overall fitness than other classes.}
+\begin{tabular}{|c|l|l|l||l|l|l|l|l|l|} \hline
+& n & ROC-AUC & acc (within-1) & ~Stub & ~Start & ~C & ~B & ~GA & ~FA \\ \hline 
+Stub & 4968 & 98.5\% & 85.5\% (99.2\%)
+& \cellcolor{green!25}4247
+& \cellcolor{yellow!25}685 & 27 & 9 & 0 & 0 \\ \hline
+Start & 4982 & 91.2\% & 64.3\% (91.5\%)
+& \cellcolor{yellow!25}600
+& \cellcolor{green!25}3205
+& \cellcolor{yellow!25}754 & 358 & 58 & 7 \\ \hline
+C & 4994 & 86.6\% & 48.9\% (86.1\%) & 44
+& \cellcolor{yellow!25}870
+& \cellcolor{green!25}2443
+& \cellcolor{yellow!25}986 & 558 & 93 \\ \hline
+B & 4990 & 84.1\% & 40.3\% (79.8\%) & 51 & 617
+& \cellcolor{yellow!25}1258
+& \cellcolor{green!25}2012
+& \cellcolor{yellow!25}710 & 342 \\ \hline
+GA & 5000 & 92.1\% & 62.7\% (93.3\%) & 1 & 19 & 313
+& \cellcolor{yellow!25}304
+& \cellcolor{green!25}3135
+& \cellcolor{yellow!25}1228 \\ \hline
+FA & 4454 & 96.1\% & 77.4\% (94.4\%) & 5 & 2 & 23 & 220
+& \cellcolor{yellow!25}757
+& \cellcolor{green!25}3447 \\ \hline
+\end{tabular}
+\label{tab:fitness_statistics}
+\end{table*}

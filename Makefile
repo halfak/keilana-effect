@@ -35,17 +35,17 @@ tables = \
 		tables/fitness_statistics.tex
 
 
-halfaker2016keilana.pdf: halfaker2016keilana.tex \
+halfaker2017keilana.pdf: halfaker2017keilana.tex \
 		$(figures) $(parts) $(sections) $(tables) refs.bib
-	rubber --pdf halfaker2016keilana.tex
+	rubber --pdf halfaker2017keilana.tex
 
-halfaker2016keilana.with_font.pdf: halfaker2016keilana.pdf
-	ps2pdf13 -dPDFSETTINGS=/prepress halfaker2016keilana.pdf halfaker2016keilana.with_fonts.pdf
+halfaker2017keilana.with_font.pdf: halfaker2017keilana.pdf
+	ps2pdf13 -dPDFSETTINGS=/prepress halfaker2017keilana.pdf halfaker2017keilana.with_fonts.pdf
 
 
-halfaker2016keilana.tar.gz: halfaker2016keilana.arxiv.pdf sigchi.cls
-	tar -zcf halfaker2016keilana.tar.gz \
-	         halfaker2016keilana.tex sigchi.cls figures parts sections tables
+halfaker2017keilana.tar.gz: halfaker2017keilana.arxiv.pdf sigchi.cls
+	tar -zcf halfaker2017keilana.tar.gz \
+	         halfaker2017keilana.tex sigchi.cls figures parts sections tables
 
 figures/biology_monthly_assessments.svg:
 	wget https://upload.wikimedia.org/wikipedia/commons/1/1f/Enwiki.biology.monthly_assessments.svg -qO- > \

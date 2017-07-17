@@ -5,17 +5,17 @@
 %% The original source files were:
 %%
 %% acmcopyright.dtx  (with options: `style')
-%% 
+%%
 %% IMPORTANT NOTICE:
-%% 
+%%
 %% For the copyright see the source file.
-%% 
+%%
 %% Any modified versions of this file must be renamed
 %% with new filenames distinct from acmcopyright.sty.
-%% 
+%%
 %% For distribution of the original source see the terms
 %% for copying and modification in the file acmcopyright.dtx.
-%% 
+%%
 %% This generated file may be distributed as long as the
 %% original source files, as listed above, are part of the
 %% same distribution. (The sources need not necessarily be
@@ -48,7 +48,7 @@
 \define@choicekey*{ACM@}{acmcopyrightmode}[%
   \acm@copyrightinput\acm@copyrightmode]{none,acmcopyright,acmlicensed,%
   rightsretained,usgov,usgovmixed,cagov,cagovmixed,%
-  licensedusgovmixed,licensedcagovmixed,othergov,licensedothergov}{%
+  licensedusgovmixed,licensedcagovmixed,othergov,licensedothergov,ccbysa}{%
   \@printpermissiontrue
   \@printcopyrighttrue
   \@acmownedtrue
@@ -61,6 +61,9 @@
    \@acmownedfalse
   \fi
   \ifnum\acm@copyrightmode=3\relax % rightsretained
+   \@acmownedfalse
+  \fi
+  \ifnum\acm@copyrightmode=12\relax % ccbysa
    \@acmownedfalse
   \fi
   \ifnum\acm@copyrightmode=4\relax % usgov
@@ -111,6 +114,8 @@
   \or % othergov
   ACM.
   \or % licensedothergov
+  \or % ccbysa
+  Copyright held by the owner/author(s).
   \fi}
 \def\@copyrightpermission{%
   \ifcase\acm@copyrightmode\relax % none
@@ -215,6 +220,10 @@
    retains a nonexclusive, royalty-free right to publish or reproduce
    this article, or to allow others to do so, for Government purposes
    only.
+  \or % ccbysa
+   This work is licensed CC-BY-SA 4.0.  You are free share and adapt freely
+   provided you also attribute the authors and license any derivative under the
+   same permissive license.
   \fi}
 \endinput
 %%
